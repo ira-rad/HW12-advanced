@@ -8,22 +8,23 @@ body {
 
 body {
   background: #000 url(https://cssanimation.rocks/demo/starwars/images/bg.jpg);
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   width: 100vw;
-
+  font-family: "Nanum Pen Script", cursive;
+  color: black;
 }
-.wrapper{
-display: flex;
-flex-direction: column;
+.wrapper {
+  display: flex;
+  flex-direction: column;
 }
-.container__first{
-margin: 0 auto;
-display: flex;
-flex-direction: column;
-position: relative;
-height: 80vh;
+.container__first {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 80vh;
 }
-.title{
+.title {
   color: #fff;
   text-align: center;
 }
@@ -44,7 +45,9 @@ img {
   width: 100%;
 }
 
-.star, .wars, .byline {
+.star,
+.wars,
+.byline {
   position: absolute;
 }
 
@@ -58,7 +61,7 @@ img {
 
 .byline {
   color: #fff;
-  font-family: 'Nanum Pen Script', cursive;
+  
   font-size: 2.25em;
   left: -2em;
   letter-spacing: 0.4em;
@@ -68,159 +71,139 @@ img {
   top: 29%;
 }
 
-
 .container__second,
-.container__thirth{
+.container__thirth {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   text-align: center;
-  }
-  #episode{
-    width: 300px;
-    height: 50px;
-    font-size: 20px;
-  }
-  
- 
-  /* option{
+}
+#episode {
+  width: 300px;
+  height: 50px;
+  font-size: 20px;
+}
+
+/* option{
     font-family: 'Nanum Pen Script', cursive;
     font-size: 27px;
   } */
-  #about-charachters,
-  .container__third--planets{
+#about-charachters,
+.container__third--planets {
   display: flex;
   flex-direction: row;
   max-width: 700px;
   flex-wrap: wrap;
-    justify-content: space-between;
-   color:white;
-
-  }
-  .container__third--planets{
-    margin-top: 30px;
-  }
+  justify-content: space-between;
+  color: white;
+}
+.container__third--planets {
+  margin-top: 30px;
+}
 #prev,
-#next{
+#next {
   display: none;
 }
-  .btn{
-    outline: none;
-    width: 300px;
-    height: 50px;
-   
-    font-family: 'Nanum Pen Script', cursive;
-    font-size: 27px;
-    border: 2px solid white;
-    cursor: pointer;
-    background-color: rgb(219, 149, 64);
-    align-self: center;
-    
-  }
-  .btn:hover{
-    background-color: rgb(155, 106, 46);
-  }
-  .btn:active{
-    background-color: rgb(134, 92, 39);
-    border: none;
-  
-  }
-
-  #select-episode{
-    font-family: 'Nanum Pen Script', cursive;
-    font-size: 27px;
-    background-color: rgb(219, 149, 64);
-    border: 2px solid white;
-    width: 300px;
-    height: 50px;
-  }
-  .container__wrapper,
-  .btn__wrapper{
-    display: flex;
-    flex-direction: row;
-   margin: 0 auto;
-
-  }
-  .character-info{
+.btn {
+  outline: none;
   width: 300px;
-    margin-top: 20px;
-    font-size: 15px;
-    font-weight: 300;
-    color: gray;
-    border: 2px solid rgba(58, 58, 19, 0.452);
-    background-color: rgb(219, 149, 64); 
-    color:black ;
-    font-family: 'Nanum Pen Script', cursive;
-    font-size: 20px;
-    border-radius: 30px;
-    box-shadow: inset -13px 10px 128px -23px rgba(0,0,0,0.59);
+  height: 50px;
+  font-size: 27px;
+  border: 2px solid white;
+  cursor: pointer;
+  background-color: rgb(219, 149, 64);
+  align-self: center;
+}
+.btn:hover {
+  background-color: rgb(155, 106, 46);
+}
+.btn:active {
+  background-color: rgb(134, 92, 39);
+  border: none;
+}
+
+#select-episode {
+  font-size: 27px;
+  background-color: rgb(219, 149, 64);
+  border: 2px solid white;
+  width: 300px;
+  height: 50px;
+}
+.container__wrapper,
+.btn__wrapper {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+.character-info {
+  width: 300px;
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: 300;
+  color: gray;
+  border: 2px solid rgba(58, 58, 19, 0.452);
+  background-color: rgb(219, 149, 64);
+  
+  font-size: 20px;
+  border-radius: 30px;
+  box-shadow: inset -13px 10px 128px -23px rgba(0, 0, 0, 0.59);
+}
+
+.container__thirth {
+  margin-top: 30px;
+}
+.btn__wrapper {
+  display: flex;
+  margin-top: 30px;
+  flex-direction: row;
+}
+#btn--get_charachters,
+#next {
+  margin-left: 20px;
+}
+.planets__name {
+  color: thistle;
+}
+
+.planet {
+  width: 300px;
+  height: 190px;
+  border: 1px dotted white;
+  border-radius: 5px;
+  background-color: rgba(219, 149, 64, 0.61);
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.planets__name {
+
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 720px) {
+  .starwars {
+    width: 22em;
+  }
+  .star {
+    top: 2.25em;
+  }
+  .wars {
+    bottom: 2.5em;
+  }
+  #byline {
+    letter-spacing: 0.2em;
   }
 
-  .container__thirth{
-    margin-top: 30px;
-  }
-  .btn__wrapper{
-display: flex;
-margin-top: 30px;
-flex-direction: row;
-
+  .container__wrapper,
+  .btn__wrapper {
+    flex-direction: column;
   }
   #btn--get_charachters,
-  #next{
-    margin-left: 20px;
+  #next {
+    margin: 0px;
+    margin-top: 20px;
   }
-  .planets__name{
-    color: thistle;
+  #about-charachters,
+  .container__third--planets {
+    flex-direction: column;
   }
-
-  .planet {
-    width: 300px;
-    height: 190px;
-    border: 1px dotted white;
-    border-radius: 5px;
-    background-color: rgba(219, 149, 64, 0.61);
-    margin-bottom: 20px;
-    padding: 10px;
-   
-  }
-  .planets__name{
-    color: black;
-    font-size: 25px;
-    font-family: 'Nanum Pen Script', cursive;
-  }
-
-  @media only screen and (max-width: 720px) {
-   .starwars{
-    width: 22em;
-   }
-.star{
-  top: 2.25em;
 }
-.wars {
-  bottom: 2.5em;
-   }
-   #byline{
-    letter-spacing: 0.2em;
-   }
-  
- .container__wrapper,
- .btn__wrapper{
-  flex-direction: column;
-
- }
- #btn--get_charachters,
- #next{
-   margin: 0px;
-   margin-top: 20px;
- }
-#about-charachters,
-.container__third--planets{
-  flex-direction: column;
-  
-}
-   
-  /* @media only screen and (max-width: 480px) {
-    .starwars-demo {
-      font-size: 7px;
-    }
-  } * */
