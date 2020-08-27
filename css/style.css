@@ -27,7 +27,10 @@ height: 80vh;
   width: 34em;
  
 }
-
+.btn--none,
+.btn--none1{
+  display: none;
+}
 .byline span {
   display: inline-block;
 }
