@@ -1,0 +1,124 @@
+
+body {
+  background: #000 url(https://cssanimation.rocks/demo/starwars/images/bg.jpg);
+  font-family: 'Roboto', sans-serif;
+}
+.wrapper{
+display: flex;
+flex-direction: column;
+}
+.container__first{
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+position: relative;
+height: 80vh;
+}
+.title{
+  color: #fff;
+  text-align: center;
+}
+.starwars {
+  height: 17em;
+  left: 50%;
+  position: absolute;
+  top: 43%;
+  transform: translate(-50%, -50%);
+  width: 34em;
+ 
+}
+
+.byline span {
+  display: inline-block;
+}
+
+img {
+  width: 100%;
+}
+
+.star, .wars, .byline {
+  position: absolute;
+}
+
+.star {
+  top: -0.75em;
+}
+
+.wars {
+  bottom: -0.5em;
+}
+
+.byline {
+  color: #fff;
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 2.25em;
+  left: -2em;
+  letter-spacing: 0.4em;
+  right: -2em;
+  text-align: center;
+  text-transform: uppercase;
+  top: 29%;
+}
+
+@media only screen and (max-width: 600px) {
+  .starwars-demo {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .starwars-demo {
+    font-size: 7px;
+  }
+}
+.container__second{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  }
+  #episode{
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+  }
+  
+  .btn{
+    width: 300px;
+    height: 50px;
+    margin-left: 30px;
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 27px;
+  }
+  /* option{
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 27px;
+  } */
+  #about-charachters{
+  
+    width: 700px;
+   color:white;
+
+  }
+  #select-episode{
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 27px;
+  }
+  .container__wrapper{
+    display: flex;
+    flex-direction: row;
+   margin: 0 auto;
+  }
+  .character-info{
+   
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 300;
+    color: gray;
+    border: 2px solid rgba(58, 58, 19, 0.452);
+  
+  }
+
+  .planets__name{
+    color: thistle;
+  }

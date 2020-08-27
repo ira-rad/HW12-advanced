@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Roboto:ital,wght@0,700;1,300;1,400&display=swap" rel="stylesheet">  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container__first">
+        <h1 class="title">Homework12</h1>
+        <div class="starwars">
+          <img src="https://cssanimation.rocks/demo/starwars/images/star.svg" alt="Star" class="star">
+          <img src="https://cssanimation.rocks/demo/starwars/images/wars.svg" alt="Wars" class="wars">
+          <h2 class="byline" id="byline">The Force Awakens</h2>
+        </div>
+      </div>
+      
+      <div class="container__second">
+        <div class="container__wrapper">
+          <select  id="select-episode">
+            <option value="choice" selected disabled> Select an episode</option>
+            <option value="episode1"> The Phantom Menace (Episode 1) </option>
+            <option value="episode2"> Attack of the Clones (Episode 2) </option>
+            <option value="episode3"> Revenge of the Sith (Episode 3)</option>
+            <option value="episode4"> A New Hope (Episode 4) </option>
+            <option value="episode5"> The Empire Strikes Back (Episode 5) </option>
+            <option value="episode6">Return of the Jedi (Episode 6) </option>
+          </select>
+          <button id="btn--get_charachters" class="btn" type="button">Get charachters</button>
+        
+        </div>
+      <div id="about-charachters"></div>
+      </div>
+      <div class="container__thirth">
+        <button id="get_planets" class="btn" type="button">Get planets </button>
+        <!-- <button id="prev" class="btn">Prev</button>
+        <button id="next" class="btn">Next </button> -->
+
+      </div>
+  
+      <!-- <div class="buttons">
+        <button class="information" type="button">Get information</button>
+      </div>
+<div class="container1"></div>
+
+    </div> -->
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script defer src="./js/script.js"></script>
+  </body>
+</html>
