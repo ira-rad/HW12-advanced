@@ -8,7 +8,6 @@ body {
 
 body {
   background: #000 url(https://cssanimation.rocks/demo/starwars/images/bg.jpg);
-  font-family: "Roboto", sans-serif;
   width: 100vw;
   font-family: "Nanum Pen Script", cursive;
   color: black;
@@ -103,6 +102,7 @@ img {
 #prev,
 #next {
   display: none;
+  
 }
 .btn {
   outline: none;
@@ -112,7 +112,8 @@ img {
   border: 2px solid white;
   cursor: pointer;
   background-color: rgb(219, 149, 64);
-  align-self: center;
+  align-self: center; font-family: "Nanum Pen Script", cursive;
+  color: black;
 }
 .btn:hover {
   background-color: rgb(155, 106, 46);
@@ -161,9 +162,6 @@ img {
 #next {
   margin-left: 20px;
 }
-.planets__name {
-  color: thistle;
-}
 
 .planet {
   width: 300px;
@@ -174,8 +172,10 @@ img {
   margin-bottom: 20px;
   padding: 10px;
 }
-.planets__name {
 
+.planets__name {
+  font-family: "Nanum Pen Script", cursive;
+  color: black;
   font-size: 25px;
 }
 
