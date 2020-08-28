@@ -82,7 +82,7 @@ btnNext.addEventListener("click", () => {
   getPlanet(page).then((res) => showPlanets(res));
 });
 btnPrev.addEventListener("click", () => {
-  if (page < 1) {
+  if (page <= 1) {
     return;
   }
   page--;
