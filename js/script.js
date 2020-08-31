@@ -1,23 +1,24 @@
-const getPlanets = document.getElementById("get_planets");
 const getCharactersButtons = document.getElementById("btn--get_charachters");
 const aboutСharachters = document.getElementById("about-charachters");
+const getPlanets = document.getElementById("get_planets");
 const selectEpisode = document.getElementById("select-episode");
-
-const BASE_URL = "https://swapi.dev/api/";
 
 const btnPrev = document.querySelector("#prev");
 const btnNext = document.querySelector("#next");
-const planet = `${BASE_URL}planets/`;
 
+const BASE_URL = "https://swapi.dev/api/";
+const planet = `${BASE_URL}planets/`;
 const getFilmUrl = (num) => `${BASE_URL}films/${num}/`;
+
 const toHTTPS = (url) =>
-  url[4].toLowerCase() === "s" ? url : url.slice(0, 4) + "s" + url.slice(4);
+  url[4].toLowerCase() === "s" ? url : `${url.slice(0, 4)}s${url.slice(4)}`;
+
 const getPlanet = (page) =>
-  axios.get(`${BASE_URL}planets/?page=${page}`).then((res) => res.data.results);
+  axios.get(`${BASE}planets/?page=${page}`).then((res) => res.data.results);
 
 let currentValue = 1;
-let page = 1;
 let film;
+let page = 1;
 
 function sendRequest(url) {
   const newURL = toHTTPS(url);
@@ -29,7 +30,6 @@ function sendRequest(url) {
 function showElem(elem) {
   elem.style.display = "block";
 }
-
 function hideElem(elem) {
   elem.style.display = "none";
 }
@@ -48,22 +48,6 @@ function showPlanets(data) {
     containerPlanets.appendChild(planetElement);
   });
 }
-
-btnNext.addEventListener("click", () => {
-  if (page > 5) {
-    return;
-  }
-  page++;
-  getPlanet(page).then((res) => showPlanets(res));
-});
-
-btnPrev.addEventListener("click", () => {
-  if (page <= 1) {
-    return;
-  }
-  page--;
-  getPlanet(page).then((res) => showPlanets(res));
-});
 
 selectEpisode.addEventListener("click", (e) => {
   currentValue = Number(e.target.value.slice(-1));
@@ -90,5 +74,20 @@ getCharactersButtons.addEventListener("click", (e) => {
 getPlanets.addEventListener("click", () => {
   showElem(btnNext);
   showElem(btnPrev);
+  getPlanet(page).then((res) => showPlanets(res));
+});
+
+btnNext.addEventListener("click", () => {
+  if (page > 5) {
+    return;
+  }
+  page++;
+  getPlanet(page).then((res) => showPlanets(res));
+});
+btnPrev.addEventListener("click", () => {
+  if (page <= 1) {
+    return;
+  }
+  page--;
   getPlanet(page).then((res) => showPlanets(res));
 });
