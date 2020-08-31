@@ -10,18 +10,20 @@ const BASE_URL = "https://swapi.dev/api/";
 const planet = `${BASE_URL}planets/`;
 const getFilmUrl = (num) => `${BASE_URL}films/${num}/`;
 
-const toHTTPS = (url) =>
-  url[4].toLowerCase() === "s" ? url : `${url.slice(0, 4)}s${url.slice(4)}`;
+const toHTTPS = (url) =>{
+  return url[4].toLowerCase() === "s" ? url : `${url.slice(0, 4)}s${url.slice(4)}`;
+}
 
 const getPlanet = (page) =>
-  axios.get(`${BASE}planets/?page=${page}`).then((res) => res.data.results);
+  axios.get(`${BASE_URL}planets/?page=${page}`).then((res) => res.data.results);
 
 let currentValue = 1;
 let film;
 let page = 1;
 
 function sendRequest(url) {
-  const newURL = toHTTPS(url);
+
+  const newURL = toHTTPS(url)
   return fetch(newURL)
     .then((res) => res.json())
     .catch("console.log");
