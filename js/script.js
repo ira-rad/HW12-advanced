@@ -10,9 +10,11 @@ const BASE_URL = "https://swapi.dev/api/";
 const planet = `${BASE_URL}planets/`;
 const getFilmUrl = (num) => `${BASE_URL}films/${num}/`;
 
-const toHTTPS = (url) =>{
-  return url[4].toLowerCase() === "s" ? url : `${url.slice(0, 4)}s${url.slice(4)}`;
-}
+const toHTTPS = (url) => {
+  return url[4].toLowerCase() === "s"
+    ? url
+    : `${url.slice(0, 4)}s${url.slice(4)}`;
+};
 
 const getPlanet = (page) =>
   axios.get(`${BASE_URL}planets/?page=${page}`).then((res) => res.data.results);
@@ -22,8 +24,7 @@ let film;
 let page = 1;
 
 function sendRequest(url) {
-
-  const newURL = toHTTPS(url)
+  const newURL = toHTTPS(url);
   return fetch(newURL)
     .then((res) => res.json())
     .catch("console.log");
@@ -59,7 +60,7 @@ getCharactersButtons.addEventListener("click", (e) => {
   sendRequest(getFilmUrl(currentValue)).then((data) => {
     let character = "";
     let i = 0;
-    while (i < data.characters.length) {
+    while (i < data.characters.length - 1) {
       i++;
       sendRequest(data.characters[i]).then((aboutCharter) => {
         character += `<div class="character-info">

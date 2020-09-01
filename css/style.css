@@ -60,7 +60,7 @@ img {
 
 .byline {
   color: #fff;
-  
+
   font-size: 2.25em;
   left: -2em;
   letter-spacing: 0.4em;
@@ -83,10 +83,6 @@ img {
   font-size: 20px;
 }
 
-/* option{
-    font-family: 'Nanum Pen Script', cursive;
-    font-size: 27px;
-  } */
 #about-charachters,
 .container__third--planets {
   display: flex;
@@ -94,7 +90,6 @@ img {
   max-width: 700px;
   flex-wrap: wrap;
   justify-content: space-between;
-  
 }
 .container__third--planets {
   margin-top: 30px;
@@ -102,7 +97,6 @@ img {
 #prev,
 #next {
   display: none;
-  
 }
 .btn {
   outline: none;
@@ -112,7 +106,7 @@ img {
   border: 2px solid white;
   cursor: pointer;
   background-color: rgb(219, 149, 64);
-  align-self: center; 
+  align-self: center;
   font-family: "Nanum Pen Script", cursive;
   color: black;
 }
